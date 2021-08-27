@@ -95,7 +95,7 @@ def solution(eqn,map_matchsticks,all_,plus_one,zero,minus_one):
       correct+=1
       print("Corrected equation is : "+str(i[0])+i[1]+str(i[2])+"="+str(i[3]))
   if correct==0:
-    print("No possible solution to equation.")
+    print("No possible solution to equation for : ",eqn)
   return None
       
 
@@ -108,15 +108,17 @@ minus_one = {0:[],1:[],2:[],3:[],4:[],5:[],6:[5],7:[1],8:[0,9,6],9:[5,3],"+":["-
 
 all_ = {0:[0,6,9,8],1:[1,7],2:[2,3],3:[3,5,2],4:[4],5:[5,3,6,9],6:[6,0,5,8,9],7:[7,1],8:[8,0,6,9],9:[9,0,3,5,6,8]}
 
-eqn1 = "5+7=2" # 9 - 7 = 2
-eqn2 = "4-1=6" # 4 + 1 = 5
-eqn3 = "6+4=4" #  0 + 4 = 4 and 8 - 4 = 4
-eqn4 = "6-2=1"  # no solution
-eqn5 = "6+8=8" # 8 + 0 = 8 or 0 + 8 = 8
-eqn6 = "3+3=5" # 3+2=5 or 5+2=3
-eqn7 = "5+9=9" # 5+3=8 or 6+3=9 or 6-0=6 or 6-6=0 or 6-6=0 or 9-9=0 or 9-0=9
+eqn_arr = []
+eqn_arr.append("5+7=2") # 9 - 7 = 2
+eqn_arr.append("4-1=6") # 4 + 1 = 5
+eqn_arr.append("6+4=4") #  0 + 4 = 4 and 8 - 4 = 4
+eqn_arr.append("6-2=1")  # no solution
+eqn_arr.append("6+8=8") # 8 + 0 = 8 or 0 + 8 = 8
+eqn_arr.append("3+3=5") # 3+2=5 or 5+2=3
+eqn_arr.append("5+9=9") # 5+3=8 or 6+3=9 or 6-0=6 or 6-6=0 or 6-6=0 or 9-9=0 or 9-0=9
 
-solution(eqn1, map_matchsticks, all_, plus_one, zero, minus_one)
+for i in eqn_arr:
+  solution(i, map_matchsticks, all_, plus_one, zero, minus_one)
   
   
   
