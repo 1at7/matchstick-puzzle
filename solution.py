@@ -1,5 +1,5 @@
 '''
-Correcting matchstick euation by replacing only one matchstick.
+Correcting matchstick equation by replacing only one matchstick.
 
 possible equations type is "int" "+ or -" "int" "=" "int"
 where all the integers are between 0-9
@@ -115,7 +115,7 @@ eqn_arr.append("6+4=4") #  0 + 4 = 4 and 8 - 4 = 4
 eqn_arr.append("6-2=1")  # no solution
 eqn_arr.append("6+8=8") # 8 + 0 = 8 or 0 + 8 = 8
 eqn_arr.append("3+3=5") # 3+2=5 or 5+2=3
-eqn_arr.append("5+9=9") # 5+3=8 or 6+3=9 or 6-0=6 or 6-6=0 or 6-6=0 or 9-9=0 or 9-0=9
+eqn_arr.append("5+9=9") 
 
 for i in eqn_arr:
   solution(i, map_matchsticks, all_, plus_one, zero, minus_one)
